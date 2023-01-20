@@ -54,13 +54,13 @@
                 <tbody>
                     <tr>
                         <td>
-                            <i class="book icon"></i> Bibliotheque detentor
+                            <i class="user icon"></i> Bibliotheque detentor
                         </td>
                         <td><?= $bibliotheque['detenteur'] ?></td>
                     </tr>
                     <tr>
                         <td>
-                            <i class="book icon"></i> Bibliotheque Place
+                            <i class="home icon"></i> Bibliotheque Place
                         </td>
                         <td><?= $bibliotheque['emplacement'] ?></td>
                     </tr>

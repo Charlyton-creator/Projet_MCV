@@ -31,12 +31,13 @@ class Book extends AbstractModel{
        * 
        */
       public function update(array $book, int $id){
-        $req = "UPDATE books SET nom=:nom, price=:price, author=:author, content_type=:content_type WHERE id=".$id;
+        $req = "UPDATE books SET nom=:nom, price=:price, author=:author, content_type=:content_type, bibliotheque_id=:bibliotheque_id WHERE id=".$id;
         $query = $this->connexion->prepare($req);
         $query->bindValue('nom', $book['libelle'], PDO::PARAM_STR);
         $query->bindValue('price', $book['price'], PDO::PARAM_INT);
         $query->bindValue('author', $book['author'], PDO::PARAM_STR);
         $query->bindValue('content_type', $book['content_type'], PDO::PARAM_STR);
+        $query->bindValue('bibliotheque_id', $book['bibliotheque_id'], PDO::PARAM_INT);
         $query->execute();
      }
 }
